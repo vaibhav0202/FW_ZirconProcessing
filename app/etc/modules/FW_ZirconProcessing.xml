@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+       <FW_ZirconProcessing>
+            <active>true</active>
+                <codePool>local</codePool>
+                <depends>
+                    <Mage_Sales/>
+                    <Mage_Checkout/>
+                    <FW_ExactTarget/>
+                </depends>
+        </FW_ZirconProcessing>
+    </modules>
+
+</config>

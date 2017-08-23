@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <zirconprocessing_tab translate="label" module="zirconprocessing">
+                <label>FW Zircon</label>
+                <sort_order>300</sort_order>
+        </zirconprocessing_tab>
+    </tabs>
+	<sections>
+            <zircon translate="label" module="zirconprocessing">
+                <label>Settings</label>
+                <tab>zirconprocessing_tab</tab>
+                <sort_order>1000</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+                <groups>
+                    <common translate="label">
+                        <label>Common</label>
+                        <comment>Common Settings</comment>
+                        <sort_order>0</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>
+                        <fields>
+                            <base_endpoint translate="label tooltip comment">
+                                 <label>Base API Endpoint</label>
+                                 <comment>Base Insert API Endpoint</comment>
+                                 <tooltip>Base Insert API Endpoint</tooltip>
+                                 <frontend_type>text</frontend_type>
+                                 <sort_order>1</sort_order>
+                                 <show_in_default>1</show_in_default>
+                                 <show_in_website>0</show_in_website>
+                                 <show_in_store>0</show_in_store>
+                             </base_endpoint>
+                            <emailnotice translate="label tooltip comment">
+                                 <label>Email address(es) for successful notifications. (comma sparated)</label>
+                                 <comment>Please enter Email address(es) for successful notifications.</comment>
+                                 <tooltip>Please enter Email address(es)for successful notifications.</tooltip>
+                                 <frontend_type>text</frontend_type>
+                                 <sort_order>4</sort_order>
+                                 <show_in_default>1</show_in_default>
+                                 <show_in_website>0</show_in_website>
+                                 <show_in_store>0</show_in_store>
+                             </emailnotice> 
+                            <error_emailnotice translate="label tooltip comment">
+                                 <label>Email address(es) to notify in case of processing errors. (comma sparated)</label>
+                                 <comment>Please enter Email address(es) to notify in case of processing errors.</comment>
+                                 <tooltip>Please enter Email address(es) to notify in case of processing errors.</tooltip>
+                                 <frontend_type>text</frontend_type>
+                                 <sort_order>5</sort_order>
+                                 <show_in_default>1</show_in_default>
+                                 <show_in_website>0</show_in_website>
+                                 <show_in_store>0</show_in_store>
+                             </error_emailnotice> 
+                        </fields>
+                    </common>
+                    <order_processing translate="label">
+                        <label>Order Processing Settings</label>
+                        <comment>Settings for Order processing</comment>
+                        <sort_order>5</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>
+                        <fields>
+                            <catalogrequest_suffix translate="label tooltip comment">
+                                <label>Catalog Request Endpoint Suffix</label>
+                                <comment>Catalog Request Endpoint Suffix</comment>
+                                <tooltip>Catalog Request Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>0</sort_order>
+                                <show_in_default>0</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </catalogrequest_suffix>
+                            <catalog_type translate="label tooltip comment">
+                                <label>Catalog Type</label>
+                                <comment>Catalog Type</comment>
+                                <tooltip>Catalog Type</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>1</sort_order>
+                                <show_in_default>0</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </catalog_type>
+                            <company_code translate="label tooltip comment">
+                                <label>Company Code</label>
+                                <comment>Company Code</comment>
+                                <tooltip>Company Code</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>2</sort_order>
+                                <show_in_default>0</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </company_code>
+                            <customerinsert_suffix translate="label tooltip comment">
+                                <label>Customer Insert Endpoint Suffix</label>
+                                <comment>Customer Insert Endpoint Suffix</comment>
+                                <tooltip>Customer Insert Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>3</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </customerinsert_suffix>
+                            <customerbyaddress_suffix translate="label tooltip comment">
+                                <label>Get Customer By Address Endpoint Suffix</label>
+                                <comment>Get Customer By Address Endpoint Suffix</comment>
+                                <tooltip>Get Customer By Address Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>4</sort_order>
+                                <show_in_default>3</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </customerbyaddress_suffix>
+                            <nextorderid_suffix translate="label tooltip comment">
+                                <label>Next Order Id Endpoint Suffix</label>
+                                <comment>Next Order Id Endpoint Suffix</comment>
+                                <tooltip>Next Order Id Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>5</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </nextorderid_suffix>
+                            <orderstatus_suffix translate="label tooltip comment">
+                                <label>Order Status Endpoint Suffix</label>
+                                <comment>Order Status Endpoint Suffix</comment>
+                                <tooltip>Order Status Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>6</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </orderstatus_suffix>
+                            <setcustomeraddress_suffix translate="label tooltip comment">
+                                <label>Set Customer Address Endpoint Suffix</label>
+                                <comment>Set Customer Address Endpoint Suffix</comment>
+                                <tooltip>Set Customer Address Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>7</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </setcustomeraddress_suffix>
+                            <towsubmission_suffix translate="label tooltip comment">
+                                <label>TOW Submission Endpoint Suffix</label>
+                                <comment>TOW Submission Endpoint Suffix</comment>
+                                <tooltip>TOW Submission Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>8</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </towsubmission_suffix>
+                            <towwsubmission_suffix translate="label tooltip comment">
+                                <label>TOWW Submission Endpoint Suffix</label>
+                                <comment>TOWW Submission Endpoint Suffix</comment>
+                                <tooltip>TOWW Submission Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>9</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </towwsubmission_suffix>
+                            <catalog_source_key translate="label tooltip comment">
+                                <label>Catalog Source Code</label>
+                                <comment>Catalog Source Code for Order processing</comment>
+                                <tooltip>Catalog Source Code for Order processing</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>10</sort_order>
+                                <show_in_default>0</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </catalog_source_key>
+                            <catalog_request_source_key translate="label tooltip comment">
+                                <label>Catalog Request Source Code</label>
+                                <comment>Catalog Request Source Code</comment>
+                                <tooltip>Catalog Request Source Code</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>11</sort_order>
+                                <show_in_default>0</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </catalog_request_source_key>
+                        </fields>
+                    </order_processing>
+                    <inventory translate="label">
+                        <label>Inventory Settings</label>
+                        <comment>Settings for Inventory Files processing</comment>
+                        <sort_order>10</sort_order>
+                        <show_in_default>1</show_in_default>
+                        <show_in_website>1</show_in_website>
+                        <show_in_store>1</show_in_store>
+                        <fields>
+                            <coupon_suffix translate="label tooltip comment">
+                                <label>Coupon Endpoint Suffix</label>
+                                <comment>Coupon Endpoint Suffix</comment>
+                                <tooltip>Coupon  Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>1</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </coupon_suffix>
+                           <giftcard_suffix translate="label tooltip comment">
+                                <label>Gift Card Endpoint Suffix</label>
+                                <comment>Gift Card Endpoint Suffix</comment>
+                                <tooltip>Gift Card Endpoint Suffix</tooltip>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>2</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>0</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </giftcard_suffix>
+                            <loyaltyaccount_suffix translate="label tooltip comment">
+                                 <label>Loyalty Account Endpoint Suffix</label>
+                                 <comment>Loyalty Account Endpoint Suffix</comment>
+                                 <tooltip>Loyalty Account Endpoint Suffix</tooltip>
+                                 <frontend_type>text</frontend_type>
+                                 <sort_order>3</sort_order>
+                                 <show_in_default>1</show_in_default>
+                                 <show_in_website>0</show_in_website>
+                                 <show_in_store>0</show_in_store>
+                             </loyaltyaccount_suffix>
+                             <loyaltyreward_suffix translate="label tooltip comment">
+                                 <label>Loyalty Reward Endpoint Suffix</label>
+                                 <comment>Loyalty Reward Endpoint Suffix</comment>
+                                 <tooltip>Loyalty Reward Endpoint Suffix</tooltip>
+                                 <frontend_type>text</frontend_type>
+                                 <sort_order>4</sort_order>
+                                 <show_in_default>1</show_in_default>
+                                 <show_in_website>0</show_in_website>
+                                 <show_in_store>0</show_in_store>
+                             </loyaltyreward_suffix>
+                            <product_suffix translate="label tooltip comment">
+                                 <label>Product API Endpoint Suffix</label>
+                                 <comment>Product API Endpoint Suffix</comment>
+                                 <tooltip>Product API Endpoint Suffix</tooltip>
+                                 <frontend_type>text</frontend_type>
+                                 <sort_order>5</sort_order>
+                                 <show_in_default>1</show_in_default>
+                                 <show_in_website>0</show_in_website>
+                                 <show_in_store>0</show_in_store>
+                             </product_suffix>
+                            <stores_to_process translate="label tooltip comment">
+                                 <label>Stores to Process</label>
+                                 <comment>Enter in Comma Delimited list like 01,02,03</comment>
+                                 <tooltip>Enter in Comma Delimited list like 01,02,03</tooltip>
+                                 <frontend_type>text</frontend_type>
+                                 <sort_order>6</sort_order>
+                                 <show_in_default>1</show_in_default>
+                                 <show_in_website>0</show_in_website>
+                                 <show_in_store>0</show_in_store>
+                             </stores_to_process>
+                        </fields>
+                    </inventory>
+                </groups>
+            </zircon>
+	</sections>
+</config>

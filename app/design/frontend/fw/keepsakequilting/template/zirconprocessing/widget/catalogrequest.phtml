@@ -1,0 +1,123 @@
+<?php
+/**
+ * @category    design
+ * @package     fw_keepsakequilting
+ */
+?>
+
+<form id="catalog-request" action="<?php echo $this->getFormAction() ?>" method="post">
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>
+                    Request a Catalog
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="firstName" class="required">First Name</label>
+                    <input id="firstName" type="text" name="firstName" required value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lastName" class="required">Last Name</label>
+                    <input id="lastName" type="text" name="lastName" required value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="country" class="required">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="CANADA">Canada</option>
+                        <option selected="selected" value="USA">United States of America</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="address">
+                    <div class="usa">
+                        <div class="td-style">
+                            <label for="address1" class="required">Address 1</label>
+                            <input id="address1" type="text" name="address1" value="" />
+                        </div>
+                        <div class="td-style">
+                            <label for="address2">Address 2</label>
+                            <input id="address2" type="text" name="address2" value="" />
+                        </div>
+                        <div class="td-style">
+                            <label for="city" class="required">City</label>
+                            <input id="city" type="text" name="city" value="" />
+                        </div>
+                        <div class="td-style">
+                            <label for="state" class="required">State</label>
+                            <select id="state" name="state" required>
+                                <?php $states = $this->getRegionCollection() ?>
+                                <?php foreach($states as $state): ?>
+                                    <option value="<?php echo $state['code'] ?>"><?php echo $state['name'] ?></option>
+                                <?php endforeach ?>
+                            </select>
+                        </div>
+                        <div class="td-style">
+                            <label for="zip" class="required">Zip</label>
+                            <input id="zip" type="text" name="zip" value="" />
+                        </div>
+                    </div>
+                    <div class="canada hidden">
+                        <div class="td-style">
+                            <label for="ca-address1" class="required">Address 1</label>
+                            <input id="ca-address1" type="text" name="ca-address1" value="" />
+                        </div>
+                        <div class="td-style">
+                            <label for="ca-city" class="required">City &amp; Province</label>
+                            <input id="ca-city" type="text" name="ca-city" value="" />
+                        </div>
+                        <div class="td-style">
+                            <label for="ca-zip" class="required">Postal Code</label>
+                            <input id="ca-zip" type="text" name="ca-zip" value="" />
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone">Day Time Phone</label>
+                    <input type="tel" name="phone" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email" class="required">Email</label>
+                    <input type="email" name="email" required value="" />
+                </td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>
+                        <button class="button" title="Submit" type="submit">Submit</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </tbody>
+
+    </table>
+</form>
+
+<script>
+    (function($j){
+        $j(function(){
+            $j("#catalog-request select[name='country']").on("change click", function() {
+                if ($j(this).val() == "USA") {
+                    $j("#catalog-request .canada").addClass('hidden');
+                    $j("#catalog-request .usa").removeClass('hidden');
+                } else {
+                    $j("#catalog-request .usa").addClass('hidden');
+                    $j("#catalog-request .canada").removeClass('hidden');
+                }
+            });
+        });
+    })(jQuery);
+</script>

@@ -1,0 +1,79 @@
+<?php
+/**
+ * @category    design
+ * @package     fw_craftofquilting
+ */
+?>
+
+<form id="catalog-request" action="<?php echo $this->getFormAction() ?>" method="post">
+
+        <ul>
+            <li>
+                <input id="firstName" type="text" name="firstName" placeholder="first name" required value="" />
+            </li>
+            <li>
+                <input id="lastName" type="text" name="lastName" placeholder="last name" required value="" />
+            </li>
+            <li>
+                <select id="country" name="country" required>
+                    <option value="CANADA">Canada</option>
+                    <option selected="selected" value="USA">United States of America</option>
+                </select>
+            </li>
+            <li class="usa">
+                <input id="address1" type="text" name="address1" placeholder="address 1" value="" />
+            </li>
+            <li class="usa">
+                <input id="address2" type="text" name="address2" placeholder="address 2" value="" />
+            </li>
+            <li class="usa">
+                <input id="city" type="text" name="city" placeholder="city" value="" />
+            </li>
+            <li class="usa">
+                <select id="state" name="state" required>
+                    <?php $states = $this->getRegionCollection() ?>
+                    <?php foreach($states as $state): ?>
+                        <option value="<?php echo $state['code'] ?>"><?php echo $state['name'] ?></option>
+                    <?php endforeach ?>
+                </select>
+            </li>
+            <li class="usa reset-child">
+                <input id="zip" type="text" name="zip" placeholder="zip" value="" />
+            </li>
+            <li class="canada hidden">
+                <input id="ca-address1" type="text" name="ca-address1" placeholder="address" value="" />
+            </li>
+            <li class="canada hidden">
+                <input id="ca-city" type="text" name="ca-city" placeholder="city &amp; province" value="" />
+            </li>
+            <li class="canada hidden">
+                <input id="ca-zip" type="text" name="ca-zip" placeholder="postal code" value="" />
+            </li>
+            <li>
+                <input type="tel" name="phone" placeholder="day time phone" value="" />
+            </li>
+            <li>
+                <input type="email" name="email" placeholder="email address" required value="" />
+            </li>
+        </ul>
+
+    <button class="button" title="Submit" type="submit">Submit</button>
+
+</form>
+
+<script>
+    (function($j){
+        $j(function(){
+            $j("#catalog-request .reset-child").after("<span style='clear: none;'></span>");
+            $j("#catalog-request select[name='country']").on("change click", function() {
+                if ($j(this).val() == "USA") {
+                    $j("#catalog-request .canada").addClass('hidden');
+                    $j("#catalog-request .usa").removeClass('hidden');
+                } else {
+                    $j("#catalog-request .usa").addClass('hidden');
+                    $j("#catalog-request .canada").removeClass('hidden');
+                }
+            });
+        });
+    })(jQuery);
+</script>

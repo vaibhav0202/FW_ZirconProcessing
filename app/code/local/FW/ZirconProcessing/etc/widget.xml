@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    FW
+ * @package     FW_ZirconProcessing
+ * @copyright   Copyright (c) 2015 F+W (http://www.fwcommunity.com)
+ * @author      J.P. Daniel <jp.daniel@fwcommunity.com>
+ */
+-->
+<widgets>
+    <fw_catalog_request_form type="zirconprocessing/widget_catalogrequest">
+        <name>Catalog Request Form</name>
+        <description>Create Catalog Request Form</description>
+    </fw_catalog_request_form>
+    <fw_catalog_request_form_footer type="zirconprocessing/widget_catalogrequestfooter">
+        <name>Catalog Request Form Footer</name>
+        <description>Create Catalog Request Form for Site Footer</description>
+    </fw_catalog_request_form_footer>
+</widgets>
